@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suman Jana — Frontend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-name">SJ</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loaderBar"></div>
+      </div>
+      <div class="loader-percent" id="loaderPercent">0%</div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">SJ<span class="accent">.</span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about"   class="nav-link">About</a></li>
+      <li><a href="#skills"  class="nav-link">Skills</a></li>
+      <li><a href="#project" class="nav-link">Project</a></li>
+      <li><a href="#certs"   class="nav-link">Certificates</a></li>
+      <li><a href="#edu"     class="nav-link">Education</a></li>
+      <li><a href="#extra"   class="nav-link">Activities</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about"   class="mob-link">About</a>
+    <a href="#skills"  class="mob-link">Skills</a>
+    <a href="#project" class="mob-link">Project</a>
+    <a href="#certs"   class="mob-link">Certificates</a>
+    <a href="#edu"     class="mob-link">Education</a>
+    <a href="#extra"   class="mob-link">Activities</a>
+    <a href="#contact" class="mob-link">Contact</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="floating-badge b1">Python 🐍</div>
+    <div class="floating-badge b2">React ⚛️</div>
+    <div class="floating-badge b3">Flask 🔥</div>
+    <div class="floating-badge b4">CSS3 🎨</div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <span class="eyebrow-pulse"></span>
+        Open to Internships &amp; Collaborations
+      </div>
+      <h1 class="hero-heading reveal">
+        Hi, I'm<br />
+        <span class="hero-name">Suman Jana</span>
+      </h1>
+      <div class="hero-role reveal">
+        <span class="role-static">I'm a&nbsp;</span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+      <p class="hero-desc reveal">
+        BCA student &amp; Frontend Developer — crafting responsive web experiences with Python, Flask &amp; clean code.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#project" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+      </div>
+      <div class="hero-socials reveal">
+        <a href="https://github.com/sumanjana" target="_blank" class="soc" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/suman-jana" target="_blank" class="soc" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:exosuman221@gmail.com" class="soc" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="sec-label reveal">01</div>
+      <h2 class="sec-title reveal">About Me</h2>
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="avatar-box">
+            <div class="avatar-text">SJ</div>
+            <div class="avatar-ring r1"></div>
+            <div class="avatar-ring r2"></div>
+          </div>
+          <div class="chips">
+            <span class="chip">🎓 BCA Student</span>
+            <span class="chip">📍 Kolkata, West Bengal</span>
+            <span class="chip">💼 Open to Opportunities</span>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <p class="about-lead">
+            I'm <strong>Suman Jana</strong>, a BCA (Hons.) student at Swami Vivekananda Institute of Modern Science, Kolkata — passionate about <strong>frontend development</strong> and <strong>Python programming</strong>.
+          </p>
+          <p class="about-body">
+            I love building responsive, clean web interfaces and turning ideas into real, working products. On the Python side I work with <strong>Flask, SQLite3, Pandas,</strong> and <strong>Jinja2</strong> — building backends and full-stack web applications. I also have solid knowledge of <strong>Cybersecurity</strong> fundamentals and MS Excel for data analysis.
+          </p>
+          <p class="about-body">
+            Currently a first-year BCA student actively seeking developer internships where I can apply my skills, build real-world applications, and grow as a developer.
+          </p>
+          <div class="stat-row">
+            <div class="stat-block">
+              <span class="stat-num counter" data-target="2">0</span><span class="accent">+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-block">
+              <span class="stat-num counter" data-target="13">0</span><span class="accent">+</span>
+              <span class="stat-label">Tech Skills</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-block">
+              <span class="stat-num counter" data-target="5">0</span><span class="accent">+</span>
+              <span class="stat-label">Certificates</span>
+            </div>
+          </div>
+          <a href="final.pdf" download class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section sec-dark" id="skills">
+    <div class="container">
+      <div class="sec-label reveal">02</div>
+      <h2 class="sec-title reveal">Skills</h2>
+      <div class="skills-wrap">
+        <div class="skill-groups reveal">
+          <div class="skill-group">
+            <h3 class="sg-title"><span>🛡️</span> Frontend</h3>
+            <div class="pills">
+              <span class="pill">HTML5</span>
+              <span class="pill">CSS3</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">React</span>
+              <span class="pill">TailwindCSS</span>
+              <span class="pill">Bootstrap</span>
+              <span class="pill">Responsive Design</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="sg-title"><span>🐍</span> Python &amp; Libraries</h3>
+            <div class="pills">
+              <span class="pill py">Python</span>
+              <span class="pill py">Flask</span>
+              <span class="pill py">NumPy</span>
+              <span class="pill py">Pandas</span>
+              <span class="pill py">SQLite3</span>
+              <span class="pill py">Jinja2</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="sg-title"><span>🛠️</span> Tools</h3>
+            <div class="pills">
+              <span class="pill tl">Git &amp; GitHub</span>
+              <span class="pill tl">VS Code</span>
+              <span class="pill tl">Figma</span>
+              <span class="pill tl">Chrome DevTools</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-bars reveal">
+          <h3 class="bars-title">Proficiency</h3>
+          <div class="bar-row">
+            <div class="bar-meta"><span>HTML &amp; CSS</span><span class="bar-pct">90%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="90"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-meta"><span>Python</span><span class="bar-pct">80%</span></div>
+            <div class="bar-track"><div class="bar-fill bar-py" data-w="80"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-meta"><span>JavaScript</span><span class="bar-pct">70%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="75"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-meta"><span>Flask</span><span class="bar-pct">70%</span></div>
+            <div class="bar-track"><div class="bar-fill bar-py" data-w="70"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-meta"><span>React</span><span class="bar-pct">50%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="60"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECT ============ -->
+  <section class="section" id="project">
+    <div class="container">
+      <div class="sec-label reveal">03</div>
+      <h2 class="sec-title reveal">Project</h2>
+
+      <div class="proj-card reveal">
+        <!-- Browser Mockup -->
+        <div class="proj-mock">
+          <div class="mock-bar">
+            <span class="dot rd"></span>
+            <span class="dot yl"></span>
+            <span class="dot gn"></span>
+            <span class="mock-url" img src=".png" >eliteassd.com</span>
+          </div>
+          <div class="mock-body">
+            <div class="mock-nav-line"></div>
+            <div class="mock-hero-area">
+              <div class="mh1"></div>
+              <div class="mh2"></div>
+              <div class="mbtn-row">
+                <div class="mbtn"></div>
+                <div class="mbtn mbtn-ghost"></div>
+              </div>
+            </div>
+            <div class="mock-cards-row">
+              <div class="mcard"></div>
+              <div class="mcard"></div>
+              <div class="mcard"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Info -->
+        <div class="proj-info">
+          <span class="proj-badge">Featured Project</span>
+          <h3 class="proj-title">Elite ASSD</h3>
+          <p class="proj-sub">Tourism Web Application</p>
+          <p class="proj-desc">
+            A full-stack tourism platform built with Python &amp; Flask. Users can explore
+            travel destinations, submit queries, leave star ratings, and book trips — all
+            managed via a secure admin panel with full CRUD, session-based auth, and
+            hashed password storage.
+          </p>
+          <ul class="proj-features">
+            <li>✦ Flask backend with SQLite database</li>
+            <li>✦ Jinja2 templating &amp; TailwindCSS UI</li>
+            <li>✦ Secure admin panel (PBKDF2 hashing)</li>
+            <li>✦ Fully responsive on all screen sizes</li>
+          </ul>
+          <div class="proj-stack">
+            <span class="stag">Python</span>
+            <span class="stag">Flask</span>
+            <span class="stag">SQLite</span>
+            <span class="stag">Jinja2</span>
+            <span class="stag">TailwindCSS</span>
+            <span class="stag">HTML/CSS</span>
+          </div>
+        </div>
+      </div>
+
+  <!-- ============ CERTIFICATES ============ -->
+  <section class="section sec-dark" id="certs">
+    <div class="container">
+      <div class="sec-label reveal">04</div>
+      <h2 class="sec-title reveal">Certificates</h2>
+      <p class="certs-sub reveal">Courses I've completed to sharpen my skills.</p>
+      <div class="certs-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-glow"></div>
+          <div class="cert-top">
+            <span class="cert-emoji">🐍</span>
+            <span class="cert-verified">✓ Verified</span>
+          </div>
+          <span class="cert-org">Kaggle · Virtual</span>
+          <h4 class="cert-name">Python Programming</h4>
+          <p class="cert-desc">Python fundamentals, data types, control structures, functions, and real-world problem-solving. Completed Jan 2026 – Feb 2026.</p>
+          <div class="cert-foot">
+            <span class="cert-year">2026</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-glow"></div>
+          <div class="cert-top">
+            <span class="cert-emoji">🛡️</span>
+            <span class="cert-verified">✓ Verified</span>
+          </div>
+          <span class="cert-org">Cisco Networking Academy · Virtual</span>
+          <h4 class="cert-name">Introduction to Cybersecurity</h4>
+          <p class="cert-desc">Online safety fundamentals, common cyber threats, personal &amp; organizational protection strategies, and cybersecurity career pathways. Oct 2025 – Jan 2026.</p>
+          <div class="cert-foot">
+            <span class="cert-year">2026</span>
+            
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-glow"></div>
+          <div class="cert-top">
+            <span class="cert-emoji">🐍</span>
+            <span class="cert-verified">✓ Verified</span>
+          </div>
+          <span class="cert-org">NICE — National Institute Of Computer Education, Kolkata</span>
+          <h4 class="cert-name">Python Programming</h4>
+          <p class="cert-desc">Python programming, algorithm development, logical problem-solving, and core programming concepts with practical coding applications.</p>
+          <div class="cert-foot">
+            <span class="cert-year">Mar – Apr 2024</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-glow"></div>
+          <div class="cert-top">
+            <span class="cert-emoji">🌐</span>
+            <span class="cert-verified">✓ Verified</span>
+          </div>
+          <span class="cert-org">NICE — National Institute Of Computer Education, Kolkata</span>
+          <h4 class="cert-name">Web Design</h4>
+          <p class="cert-desc">WordPress development, web hosting, cybersecurity basics, website creation, theme customization, and security implementation.</p>
+          <div class="cert-foot">
+            <span class="cert-year">Mar – May 2024</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-glow"></div>
+          <div class="cert-top">
+            <span class="cert-emoji">📊</span>
+            <span class="cert-verified">✓ Verified</span>
+          </div>
+          <span class="cert-org">NICE — National Institute Of Computer Education, Kolkata</span>
+          <h4 class="cert-name">MS Excel</h4>
+          <p class="cert-desc">Advanced formulas, pivot tables, data analysis, macros, data visualization, business analytics, and financial modeling applications.</p>
+          <div class="cert-foot">
+            <span class="cert-year">Mar – May 2024</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section" id="edu">
+    <div class="container">
+      <div class="sec-label reveal">05</div>
+      <h2 class="sec-title reveal">Education</h2>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <div>
+                <h4 class="tl-deg">BCA (Hons.) — Computer Application</h4>
+                <p class="tl-school">Swami Vivekananda Institute of Modern Science</p>
+              </div>
+              <span class="tl-badge active">Current</span>
+            </div>
+            <p class="tl-yr">2024 — 2028</p>
+            <p class="tl-detail">Pursuing &nbsp;·&nbsp; Python, Web Development, Data Structures, DBMS, Computer Application</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <div>
+                <h4 class="tl-deg">Higher Secondary — Class XII</h4>
+                <p class="tl-school">Naktala High School</p>
+              </div>
+              <span class="tl-badge">Completed</span>
+            </div>
+            <p class="tl-yr">2024</p>
+            <p class="tl-detail">EcoScience &amp; 60%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXTRACURRICULAR ============ -->
+  <section class="section" id="extra">
+    <div class="container">
+      <div class="sec-label reveal">06</div>
+      <h2 class="sec-title reveal">Extracurricular &amp; Activities</h2>
+      <div class="extra-grid">
+        <div class="extra-card reveal">
+          <div class="extra-icon">🎪</div>
+          <div class="extra-body">
+            <h4 class="extra-title">Volunteer — College FEST &amp; E4 Event</h4>
+            <p class="extra-desc">Managed the Food &amp; E-Mon section during the E4 event — coordinated with food stalls, distributed food samples to faculty members, and collected data on total cost and profit of each store for evaluation and ranking.</p>
+          </div>
+        </div>
+        <div class="extra-card reveal">
+          <div class="extra-icon">🎵</div>
+          <div class="extra-body">
+            <h4 class="extra-title">Event Coordinator — College FEST</h4>
+            <p class="extra-desc">Assisted in event coordination and crowd management during the college FEST, ensuring smooth movement of attendees and coordinating with musicians and performers for scheduled performances.</p>
+          </div>
+        </div>
+        <div class="extra-card reveal">
+          <div class="extra-icon">🤖</div>
+          <div class="extra-body">
+            <h4 class="extra-title">AI Tools Workshop</h4>
+            <p class="extra-desc">Attended a one-day online workshop on AI tools and received a participation certificate. Hobbies include travelling and exploring new places and technologies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section sec-dark" id="contact">
+    <div class="container">
+      <div class="sec-label reveal">07</div>
+      <h2 class="sec-title reveal">Get In Touch</h2>
+      <div class="contact-wrap">
+        <div class="contact-left reveal">
+          <p class="contact-lead">
+            Whether it's an internship, a collab idea,
+            or just a hello — my inbox is always open.
+          </p>
+          <div class="c-info-list">
+            <a href="mailto:exosuman221@gmail.com" class="c-info">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span class="c-label">Email</span>
+                <span class="c-val">exosuman221@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/suman-jana" target="_blank" class="c-info">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <span class="c-label">LinkedIn</span>
+                <span class="c-val">linkedin.com/in/suman-jana</span>
+              </div>
+            </a>
+            <a href="https://github.com/sumanjana" target="_blank" class="c-info">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div>
+                <span class="c-label">GitHub</span>
+                <span class="c-val">github.com/sumanjana</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="name" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" name="email" placeholder="you@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsub">Subject</label>
+            <input type="text" id="fsub" name="subject" placeholder="Internship / Collaboration / Other" required />
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" name="message" rows="5" placeholder="Hi! I'd love to..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+            <span id="submitTxt">Send Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">SJ<span class="accent">.</span></span>
+        <p class="footer-copy">Designed &amp; Built by <strong>Suman Jana</strong> · 2026</p>
+        <div class="footer-socs">
+          <a href="https://github.com/sumanjana" target="_blank" aria-label="GitHub" class="soc">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/suman-jana" target="_blank" aria-label="LinkedIn" class="soc">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
